@@ -1,8 +1,8 @@
-# Madan Belbase - Developer Portfolio
+# Madan Belbase
 
 A developer portfolio with a personal introduction on top and an interactive, command-driven terminal below.
 
-## Technology Stack (unchanged)
+## Technology Stack
 
 - **Frontend**: HTML5, Tailwind CSS 2.2 (CDN), vanilla JavaScript - no build step
 - **Icons**: Font Awesome 6.5.2
