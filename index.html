@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madan Belbase · Backend &amp; ML Engineer</title>
+  <meta name="description"
+    content="Portfolio of Madan Belbase, a backend and machine learning engineer (Python, FastAPI, PyTorch, YOLOv8) and computer engineering student in Kathmandu. Explore projects, skills and experience through an interactive terminal.">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f172a'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='30' font-weight='700' text-anchor='middle' fill='%2322d3ee'%3E%26gt;_%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <a href="#terminal" class="skip-link">Skip to the terminal</a>
+
+  <!-- 3D Cube Background (decorative) -->
+  <div id="cube-container" aria-hidden="true">
+    <div id="cube">
+      <div id="front"></div>
+      <div id="back"></div>
+      <div id="right"></div>
+      <div id="left"></div>
+      <div id="top"></div>
+      <div id="bottom"></div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="site-header fixed w-full z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between" aria-label="Main">
+      <a href="#hero" class="brand text-xl sm:text-2xl font-bold">Madan Belbase</a>
+
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ TOP: PERSONAL INTRODUCTION ============ -->
+    <section id="hero" class="hero relative" aria-labelledby="hero-name">
+      <!-- Animated nodes (decorative) -->
+      <div class="absolute inset-0 z-0 opacity-30" aria-hidden="true">
+        <div class="node-connection">
+          <div class="node" style="top:20%; left:15%"></div>
+          <div class="node" style="top:30%; left:80%"></div>
+          <div class="node" style="top:70%; left:25%"></div>
+          <div class="node" style="top:80%; left:70%"></div>
+          <svg class="connections" width="100%" height="100%">
+            <line x1="15%" y1="20%" x2="80%" y2="30%" class="connection-line" />
+            <line x1="25%" y1="70%" x2="70%" y2="80%" class="connection-line" />
+            <line x1="80%" y1="30%" x2="25%" y2="70%" class="connection-line" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="hero-grid relative z-10">
+        <!-- Identity -->
+        <div class="hero-identity">
+          <div class="hero-photo group">
+            <div class="hero-photo-glow"></div>
+            <img src="image/profile-384.jpg" width="384" height="384" alt="Portrait of Madan Belbase"
+              fetchpriority="high" decoding="async">
+          </div>
+
+          <div class="hero-text">
+            <h1 id="hero-name" class="text-4xl md:text-5xl font-bold text-white mb-2">Madan Belbase</h1>
+            <p class="text-xl text-cyan-400 font-mono mb-4">Backend &amp; ML Engineer</p>
+            <p class="text-gray-300 text-lg">
+              Building <span class="text-cyan-400">computer-vision &amp; deep-learning systems</span> and the
+              <span class="text-purple-400">FastAPI backends</span> that serve them. Comfortable across
+              <span class="text-green-400">Python</span>, <span class="text-yellow-400">PyTorch</span> and the web stack.
+            </p>
+
+            <ul class="hero-facts font-mono text-sm text-gray-400">
+              <li><i class="fas fa-location-dot text-purple-400" aria-hidden="true"></i> Kathmandu, Nepal</li>
+              <li><i class="fas fa-graduation-cap text-cyan-400" aria-hidden="true"></i> B.E. Computer Engineering · NCIT, Pokhara University</li>
+              <li><i class="fas fa-pen-nib text-green-400" aria-hidden="true"></i> Writes about AI, machine learning &amp; APIs</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Existing profile.js card, kept as a visual signature -->
+        <div class="terminal-window hero-code" aria-hidden="true">
+          <div class="terminal-header">
+            <div class="flex space-x-2 mr-4">
+              <div class="w-3 h-3 rounded-full bg-red-500"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
+            <div class="text-xs text-gray-400 font-mono">~/madan-belbase/profile.js</div>
+          </div>
+          <div class="p-6 text-left font-mono text-sm">
+            <div class="mb-3"><span class="text-purple-400">const</span> <span class="text-cyan-400">aboutMe</span> <span class="text-gray-400">=</span> <span class="text-gray-500">{</span></div>
+            <div class="ml-6 mb-1"><span class="text-green-400">name</span><span class="text-gray-400">:</span> <span class="text-yellow-400">'Madan Belbase'</span><span class="text-gray-400">,</span></div>
+            <div class="ml-6 mb-1"><span class="text-green-400">roles</span><span class="text-gray-400">:</span> <span class="text-gray-500">[</span><span class="text-yellow-400">'Backend Engineer'</span><span class="text-gray-400">,</span> <span class="text-yellow-400">'ML Engineer'</span><span class="text-gray-500">]</span><span class="text-gray-400">,</span></div>
+            <div class="ml-6 mb-1"><span class="text-green-400">languages</span><span class="text-gray-400">:</span> <span class="text-gray-500">[</span><span class="text-yellow-400">'Python'</span><span class="text-gray-400">,</span> <span class="text-yellow-400">'TypeScript'</span><span class="text-gray-400">,</span> <span class="text-yellow-400">'C++'</span><span class="text-gray-500">]</span><span class="text-gray-400">,</span></div>
+            <div class="ml-6 mb-1"><span class="text-green-400">specialties</span><span class="text-gray-400">:</span> <span class="text-gray-500">[</span><span class="text-yellow-400">'YOLOv8'</span><span class="text-gray-400">,</span> <span class="text-yellow-400">'NLP'</span><span class="text-gray-400">,</span> <span class="text-yellow-400">'FastAPI'</span><span class="text-gray-500">]</span><span class="text-gray-400">,</span></div>
+            <div class="ml-6 mb-3"><span class="text-green-400">currentStack</span><span class="text-gray-400">:</span> <span class="text-yellow-400">'Python, PyTorch, FastAPI, Docker'</span></div>
+            <div class="text-gray-500">}</div>
+            <div class="mt-4"><span class="text-gray-400">$</span> <span class="text-green-400">uvicorn</span> <span class="text-cyan-400">main:app</span> <span class="text-yellow-400">--reload</span></div>
+          </div>
+        </div>
+
+        <!-- Stack badges + CTAs -->
+        <div class="hero-actions">
+          <ul class="flex flex-wrap justify-center gap-3 mb-8" aria-label="Core technologies">
+            <li class="tech-badge"><span class="text-blue-400">Python</span></li>
+            <li class="tech-badge"><span class="text-green-400">FastAPI</span></li>
+            <li class="tech-badge"><span class="text-orange-400">PyTorch</span></li>
+            <li class="tech-badge"><span class="text-cyan-400">YOLOv8</span></li>
+            <li class="tech-badge"><span class="text-yellow-400">TensorFlow</span></li>
+            <li class="tech-badge"><span class="text-green-400">Node.js</span></li>
+            <li class="tech-badge"><span class="text-cyan-400">React</span></li>
+            </ul>
+
+          <div class="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-4">
+            <a href="#terminal" class="modern-cta bg-gray-800 hover:bg-gray-700 border-gray-700 text-cyan-400">
+              <span class="text-gray-400" aria-hidden="true">&gt;</span> exploreTerminal()
+            </a>
+            <a href="MadanBelbase.pdf" target="_blank" rel="noopener"
+              class="modern-cta bg-gray-800 hover:bg-gray-700 border-gray-700 text-purple-400">
+              <i class="fas fa-file-lines" aria-hidden="true"></i> resume.pdf<span class="sr-only"> (opens in new tab)</span>
+            </a>
+            <div class="flex justify-center gap-3">
+              <a href="https://github.com/MadanBelbase" target="_blank" rel="noopener" aria-label="GitHub (opens in new tab)"
+                class="social-icon bg-gray-800 hover:bg-gray-700 border border-gray-700 text-gray-300 hover:text-white"><i class="fab fa-github" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/madan-belbase/" target="_blank" rel="noopener" aria-label="LinkedIn (opens in new tab)"
+                class="social-icon bg-gray-800 hover:bg-blue-600 border border-gray-700 text-gray-300 hover:text-white"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+              <a href="https://x.com/belbase_madan_" target="_blank" rel="noopener" aria-label="X / Twitter (opens in new tab)"
+                class="social-icon bg-gray-800 hover:bg-black border border-gray-700 text-gray-300 hover:text-white"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+              <button type="button" data-run="contact" aria-label="Show contact details in the terminal"
+                class="social-icon bg-gray-800 hover:bg-gray-700 border border-gray-700 text-gray-300 hover:text-white"><i class="fas fa-envelope" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOTTOM: INTERACTIVE TERMINAL ============ -->
+    <section id="terminal" class="term-section relative" aria-labelledby="terminal-title">
+      <div class="max-w-5xl mx-auto relative z-10">
+        <h2 id="terminal-title"
+          class="grad-text text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 font-mono">
+          $ explore --portfolio
+        </h2>
+        <p class="text-center text-gray-400 mb-6 term-lead">
+          Type a command, or tap an option. Start with <button type="button" class="t-inline-cmd" data-run="help">help</button>.
+        </p>
+
+        <div class="term" id="term" role="region" aria-label="Interactive portfolio terminal">
+          <div class="term-bar">
+            <div class="term-dots" aria-hidden="true"><i class="bg-red-500"></i><i class="bg-yellow-500"></i><i class="bg-green-500"></i></div>
+            <div class="term-title">visitor@madan-belbase: ~</div>
+            <button type="button" class="term-tool" data-run="clear" title="Clear the screen (Ctrl+L)">
+              <i class="fas fa-eraser" aria-hidden="true"></i> clear
+            </button>
+          </div>
+
+          <div class="term-chips" role="group" aria-label="Quick commands">
+            <button type="button" class="t-chip" data-run="help">help</button>
+            <button type="button" class="t-chip" data-run="about">about</button>
+            <button type="button" class="t-chip" data-run="skills">skills</button>
+            <button type="button" class="t-chip" data-run="projects">projects</button>
+            <button type="button" class="t-chip" data-run="experience">experience</button>
+            <button type="button" class="t-chip" data-run="education">education</button>
+            <button type="button" class="t-chip" data-run="achievements">achievements</button>
+            <button type="button" class="t-chip" data-run="blog">blog</button>
+            <button type="button" class="t-chip" data-run="contact">contact</button>
+            <button type="button" class="t-chip" data-run="resume">resume</button>
+          </div>
+
+          <div class="term-screen" id="termScreen">
+            <div id="termOut" role="log" aria-live="polite" aria-relevant="additions" aria-label="Terminal output"></div>
+            <div class="term-line">
+              <span class="t-prompt" aria-hidden="true"><span class="t-user">visitor</span><span class="t-at">@</span><span class="t-host">madan</span><span class="t-colon">:</span><span class="t-path">~</span><span class="t-dollar">$</span></span>
+              <input id="termInput" class="term-input" type="text" autocomplete="off" autocapitalize="off" autocorrect="off"
+                spellcheck="false" enterkeyhint="send" maxlength="200"
+                aria-label="Terminal command. Type help to list commands, press Enter to run."
+                aria-describedby="termKeys">
+            </div>
+            <div id="termSuggest" class="term-suggest" role="group" aria-label="Suggestions" hidden></div>
+          </div>
+
+          <p id="termKeys" class="term-keys">
+            <span><kbd>↑</kbd><kbd>↓</kbd> history</span>
+            <span><kbd>Tab</kbd> autocomplete</span>
+            <span><kbd>Ctrl</kbd>+<kbd>L</kbd> clear</span>
+            <span><kbd>Esc</kbd> leave input</span>
+          </p>
+        </div>
+
+        <noscript>
+          <p class="text-center text-gray-400 mt-4 font-mono">
+            The terminal needs JavaScript. Reach me at
+            <a class="text-cyan-400 underline" href="mailto:madanbelbase927@gmail.com">madanbelbase927@gmail.com</a>
+            or see my <a class="text-cyan-400 underline" href="https://github.com/MadanBelbase">GitHub</a>.
+          </p>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer - Terminal Style -->
+  <footer class="py-8 text-center bg-gray-900/90 backdrop-blur-md border-t border-gray-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-gray-400 font-mono text-sm">
+        <span class="text-gray-500">//</span> © 2026 <span class="text-cyan-400">Madan Belbase</span>. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Contact form (opened by the `message` command) -->
+  <dialog id="messageDialog" class="msg-dialog" aria-labelledby="msgTitle">
+    <div class="msg-head">
+      <span id="msgTitle" class="font-mono text-xs text-gray-400">// contact_form.js</span>
+      <button type="button" id="msgClose" class="msg-close" aria-label="Close contact form"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+    </div>
+
+    <form id="contactForm" class="msg-body" data-email="madanbelbase927@gmail.com">
+      <input type="hidden" name="access_key" value="46d2b706-cb7b-411b-b4fa-a5674ad33811">
+      <input type="hidden" name="subject" value="New message from madanbelbase portfolio">
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+
+      <div>
+        <label for="cf-name" class="block text-sm font-mono text-gray-400 mb-2">
+          <span class="text-purple-400" aria-hidden="true">const </span><span class="text-cyan-400">name</span><span aria-hidden="true"> =</span>
+        </label>
+        <input type="text" id="cf-name" name="name" required autocomplete="name" class="msg-field">
+      </div>
+      <div>
+        <label for="cf-email" class="block text-sm font-mono text-gray-400 mb-2">
+          <span class="text-purple-400" aria-hidden="true">const </span><span class="text-cyan-400">email</span><span aria-hidden="true"> =</span>
+        </label>
+        <input type="email" id="cf-email" name="email" required autocomplete="email" class="msg-field">
+      </div>
+      <div>
+        <label for="cf-message" class="block text-sm font-mono text-gray-400 mb-2">
+          <span class="text-purple-400" aria-hidden="true">let </span><span class="text-cyan-400">message</span><span aria-hidden="true"> =</span>
+        </label>
+        <textarea id="cf-message" name="message" rows="5" required class="msg-field"></textarea>
+      </div>
+
+      <p id="formStatus" class="msg-status font-mono text-sm" role="status" aria-live="polite"></p>
+
+      <button type="submit" id="submitBtn"
+        class="msg-submit font-mono">
+        <span class="text-gray-200" aria-hidden="true">$</span> submitForm()
+      </button>
+    </form>
+
+    <div id="msgSuccess" class="msg-body text-center" hidden>
+      <div class="text-green-400 text-5xl mb-4" aria-hidden="true">✓</div>
+      <h3 class="text-2xl font-bold text-white mb-2 font-mono" tabindex="-1" id="msgSuccessTitle">Success!</h3>
+      <p class="text-gray-300 mb-6">Your message has been queued for delivery. I'll respond soon!</p>
+      <button type="button" id="msgDone"
+        class="px-6 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-lg border border-gray-700 font-mono transition-all">
+        <span class="text-gray-400" aria-hidden="true">$</span> closeModal()
+      </button>
+    </div>
+  </dialog>
+
+  <script src="script.js" defer></script>
+  <script src="terminal.js" defer></script>
+</body>
+
+</html>
